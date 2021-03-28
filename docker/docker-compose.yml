@@ -21,7 +21,7 @@ services:
     depends_on:
       - php-fpm
     ports:
-      - "8080:80"
+      - "80:80"
       - "443:443"
     command: [nginx, '-g', 'daemon off;']
 

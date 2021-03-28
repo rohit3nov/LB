@@ -17,7 +17,7 @@ class CityController
         $this->cityData  = $cityData;
     }
 
-    public function addCity()
+    public function addCity() : void
     {
         $dbConnector = new DatabaseConnector();
         $dbData = $this->csvParser->getCityDataFromDb($dbConnector,array($this->cityData['city_id']));
@@ -39,8 +39,6 @@ class CityController
             $updator = new CsvUpdator();
             $updator->handle($this->csvParser);
         }
-        exit;
-
     }
 
 

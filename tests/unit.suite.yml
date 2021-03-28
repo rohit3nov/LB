@@ -7,4 +7,8 @@ modules:
     enabled:
         - Asserts
         - \Helper\Unit
-    step_decorators: ~        
+        - Db:
+            dsn: 'mysql:host=lb-db;dbname=lb'
+            user: 'root'
+            password: 'root_pass'
+    step_decorators: ~

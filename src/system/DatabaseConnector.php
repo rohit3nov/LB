@@ -2,7 +2,7 @@
 
 namespace App\system;
 
-use mysqli;
+// use mysqli;
 
 class DatabaseConnector {
 
@@ -16,7 +16,7 @@ class DatabaseConnector {
         $user = getenv('DB_USERNAME');
         $pass = getenv('DB_PASSWORD');
 
-        $conn = new mysqli($host,$user,$pass,$db,$port);
+        $conn = new \mysqli($host,$user,$pass,$db,$port);
         $conn->options(MYSQLI_OPT_LOCAL_INFILE,true);
         if ($conn->connect_error) {
             die("Error: Could not connect to database : " . $conn->connect_error);

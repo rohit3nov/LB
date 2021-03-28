@@ -52,12 +52,9 @@ $app->put('/cities/{city_id}',
         $parser  = new CsvParser();
 
         $cc = new CityController($parser,$cityData);
-        $data = $cc->addCity();
-
-        print_r($data);
-        // $html = var_export($data, true);
-        // $response->getBody()->write($html);
-        // return $response;
+        $cc->addCity();
+        $response->getBody()->write('City added successfuly!');
+        return $response;
 
     }
 );
