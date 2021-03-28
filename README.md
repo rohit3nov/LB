@@ -1,10 +1,9 @@
 # docker setup
 
 1. Go to root of the cloned repo. Run <b>"sh setup.sh"</b> to start containers.
-2. Run "docker ps" to check if all the containers are running.
-# parse worldcities.csv and update cities.csv with updates of asean cities
-
-1. Run "docker exec -t php-fpm php src/parseCsv.php" to update cities.csv
+2. Run <b>"docker ps"</b> to check if all the containers are running.
+# Parse CSV
+1. Run <b>"docker exec -t php-fpm php src/parseCsv.php"</b> to parse worldcities.csv and update cities.csv with updates of asean cities
 
 # API
 
