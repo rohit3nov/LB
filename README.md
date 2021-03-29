@@ -1,13 +1,15 @@
-# setup
+# Installation
 
 Go to root of the cloned repo and do below steps:
-    - Rename .env.example to .env by running "mv .env.example .env"
-    - Run "composer install" to install dependencies
-    - Run <b>"sh setup.sh"</b> to start containers.
-    - Run <b>"docker ps"</b> to check if all the containers are running.
+
+    - Rename "env.example" to ".env" by running "mv .env.example .env".
+    - Run "composer install" to install dependencies.
+    - Run "sh setup.sh" to start containers.
+    - Run "docker ps" to check if all the containers are running.
+    
 # Parse CSV
 
-- Run <b>"docker exec -t php-fpm php src/parseCsv.php"</b> to parse worldcities.csv and update cities.csv with updates of asean cities
+- Run <b>docker exec -t php-fpm php src/parseCsv.php</b> to parse worldcities.csv and update cities.csv with updates of asean cities.
 
 # API
 
@@ -19,5 +21,5 @@ Hit below api to add/update the city to CSV.
 
 # Database
 
-- Visti http://localhost:3307/ to check database
+- Visit http://localhost:3307/ to check database.
 
