@@ -22,6 +22,8 @@ Hit below api to add/update the city to CSV.
 # Database
 
 - Visit http://localhost:3307/ to check database.
+    - username: root
+    - password: root_pass
 
 # Testing
 
