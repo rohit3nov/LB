@@ -37,6 +37,10 @@ class CsvParser
         $this->csv->setDelimiter(';');
         $this->csv->setHeaderOffset(0);
     }
+    public function getRowCount() : int
+    {
+        return count($this->csv);
+    }
 
     public function parse() :void
     {
@@ -54,7 +58,6 @@ class CsvParser
 
     public function loadCsvInDb(DatabaseConnector $dbConnector): bool
     {
-
         $connection = $dbConnector->getConnection();
         if ($this->cleanDbData($connection)) {
             if ($connection) {
@@ -222,6 +225,11 @@ class CsvParser
     public function getCsvHeader() : string
     {
         return $this->csv->getHeader()[0];
+    }
+
+    public function getCsvTableName() : string
+    {
+        return $this->tableName;
     }
 
     protected function getCsvHash() : string

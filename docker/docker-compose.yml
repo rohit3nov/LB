@@ -29,13 +29,10 @@ services:
     container_name: lb-db
     build:
       context: ./database
-    # user: $UID:$GID
-    # working_dir: $HOME
-    # stdin_open: true
     volumes:
       - ./database/sql:/docker-entrypoint-initdb.d
       - ./database/data:/var/lib/mysql
-      # - ../storage/tmp:/var/lib/mysql/tmp
+      - ./database/conf.d:/etc/mysql/conf.d
     environment:
       - MYSQL_DATABASE=lb
       - MYSQL_USER=lb_user

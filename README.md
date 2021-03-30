@@ -6,7 +6,7 @@ Go to root of the cloned repo and do below steps:
     - Run "composer install" to install dependencies.
     - Run "sh setup.sh" to start containers.
     - Run "docker ps" to check if all the containers are running.
-    
+
 # Parse CSV
 
 - Run <b>docker exec -t php-fpm php src/parseCsv.php</b> to parse worldcities.csv and update cities.csv with updates of asean cities.
@@ -23,3 +23,6 @@ Hit below api to add/update the city to CSV.
 
 - Visit http://localhost:3307/ to check database.
 
+# Testing
+
+- Run "docker exec -t php-fpm php vendor/bin/codecept run unit CsvTest" to run test cases

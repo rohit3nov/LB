@@ -13,4 +13,6 @@ CREATE TABLE IF NOT EXISTS `worldCities` (
   `id` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`uid`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+TRUNCATE TABLE worldCities;

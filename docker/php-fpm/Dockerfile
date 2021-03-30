@@ -1,5 +1,5 @@
 FROM php:7.4-fpm-alpine
-RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install mysqli pdo_mysql
 COPY . /var/www/html
 ARG USER_ID
 RUN echo http://dl-2.alpinelinux.org/alpine/edge/community/ >> /etc/apk/repositories

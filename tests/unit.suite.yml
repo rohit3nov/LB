@@ -11,4 +11,12 @@ modules:
             dsn: 'mysql:host=lb-db;dbname=lb'
             user: 'root'
             password: 'root_pass'
+            dump: 'tests/_data/lb_db.sql'
+            cleanup: false
+            populate: true
+            databases:
+              lb:
+                dsn: 'mysql:host=lb-db;dbname=lb'
+                user: 'root'
+                password: 'root_pass'
     step_decorators: ~
