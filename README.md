@@ -27,4 +27,4 @@ Hit below api to add/update the city to CSV.
 
 # Testing
 
-- Run "docker exec -t php-fpm php vendor/bin/codecept run unit CsvTest" to run test cases
+- Run <b>"docker exec -t php-fpm php vendor/bin/codecept run unit CsvTest"</b> to run test cases
